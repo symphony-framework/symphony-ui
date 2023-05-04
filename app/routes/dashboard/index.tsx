@@ -15,21 +15,14 @@ const Dashboard = () => {
       id: 1,
       title: "Concepts",
       description: "Learn the concepts of Symphony before getting started",
-      link: { text: "Learn concepts", href: "#" },
+      link: { text: "Learn concepts", href: "https://symphony-framework.github.io" },
     },
     {
       id: 2,
       title: "Get Started",
       description:
         "Learn how to auto-deploy and self-host Symphony using our CLI tool",
-      link: { text: "Get Started", href: "#" },
-    },
-    {
-      id: 3,
-      title: "Examples",
-      description:
-        "Browse and take inspiration from our galley of collaborative UI patterns",
-      link: { text: "Browse Examples", href: "#" },
+      link: { text: "Get Started", href: "https://github.com/symphony-framework/symphony-cli" },
     },
   ];
 
@@ -48,7 +41,8 @@ const Dashboard = () => {
       setConnections(connections);
       setLastUpdate(new Date())
     } catch {
-      
+      console.log("could not fetch metrics")
+      return;
     }
   }
   
